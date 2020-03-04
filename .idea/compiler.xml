@@ -13,4 +13,9 @@
       <module name="BudgetPlanner" target="11" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="BudgetPlanner" options="--add-exports=jdk.hotspot.agent/sun.jvm.hotspot.utilities=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

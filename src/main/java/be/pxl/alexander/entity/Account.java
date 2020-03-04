@@ -8,6 +8,7 @@ public class Account {
     private String IBAN;
     private String name;
     private List<Payment> payments;
+    private int id;
 
     public String getIBAN() {
         return IBAN;
@@ -40,4 +41,8 @@ public class Account {
                 ", name='" + name + '\'' +
                 ", payments=[" + payments.stream().map(Payment::toString).collect(Collectors.joining(",")) + "]}";
     }
+
+    public void setId(int id) { this.id = id; }
+
+    public int getId() { return id; }
 }

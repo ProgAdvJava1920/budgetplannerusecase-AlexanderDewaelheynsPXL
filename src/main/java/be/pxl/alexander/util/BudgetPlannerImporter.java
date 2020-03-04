@@ -20,14 +20,14 @@ import java.util.Locale;
  * Util class to import csv file
  */
 public class BudgetPlannerImporter {
-    private String fileName;
+    // private String fileName;
     private Account account = null;
 
-    public BudgetPlannerImporter(String fileName) {
-        this.fileName = fileName;
+    public BudgetPlannerImporter() {
+        // this.fileName = fileName;
     }
 
-    public Account readFile() {
+    public Account readFile(String fileName) {
         List<Payment> payments = new ArrayList<>();
         Path path = Paths.get(fileName);
         try (BufferedReader reader = Files.newBufferedReader(path)) {
@@ -59,7 +59,7 @@ public class BudgetPlannerImporter {
     }
 
     private Payment createPayment(String[] lines) {
-//Account name,Account IBAN,Counteraccount IBAN,Transaction date,Amount,Currency,Detail
+        //Account name,Account IBAN,Counteraccount IBAN,Transaction date,Amount,Currency,Detail
 
         float amount = Float.parseFloat(lines[4]);
         DateTimeFormatter formatter=DateTimeFormatter.ofPattern("E MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
