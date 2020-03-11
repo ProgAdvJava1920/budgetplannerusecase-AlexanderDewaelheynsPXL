@@ -15,7 +15,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="BudgetPlanner" options="--add-exports=jdk.hotspot.agent/sun.jvm.hotspot.utilities=ALL-UNNAMED" />
+      <module name="BudgetPlanner" options="" />
     </option>
   </component>
 </project>
